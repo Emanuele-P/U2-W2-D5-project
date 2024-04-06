@@ -1,0 +1,77 @@
+@import "./partials/bootstrap-overrides";
+
+// custom style
+
+@mixin interactive {
+    background: $darker-color;
+    border-radius: 2px;
+}
+
+.icon {
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    footer & {
+        color: inherit;
+        margin-left: 1rem;
+    }
+}
+
+.interactive {
+    @include interactive
+}
+
+.gallery {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    &.row {
+        overflow: hidden;
+    }
+    img {
+        cursor: pointer;
+    }
+    .carousel-control-prev, .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+    .carousel-control-prev {
+        left: 0;
+    }
+    .carousel-control-next {
+        right: 0;
+    }
+}
+
+footer {
+    font-size: $fs-7;
+    a {
+        text-decoration: none;
+        color: inherit;
+        text-align: start;
+        &:visited {
+            text-decoration: inherit;
+            color: inherit;
+        }
+    }
+ .footer-wrapper {
+    font-size: 10px;
+    @media (min-width: $md) {
+    max-width: 60%;
+    font-size: $fs-7;
+    margin-inline: auto; }
+ }   
+    .social-icons {
+        gap: 1rem;
+    }
+.table {
+    border: none;
+}
+.table td,
+.table th {
+    border: none;
+    color: inherit;
+}
+}
